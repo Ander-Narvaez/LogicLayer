@@ -56,5 +56,36 @@ namespace LogicLayer
             return vArticulo.GetListArticulo(vArticulo, pACCION);
         }
 
+        DataLayer.Class.ClsArticulo_Inventario vArticulo_Inventario = new DataLayer.Class.ClsArticulo_Inventario();
+        [WebMethod]
+        public string MaintenanceArticulo_Inventario(string pEMPRESA, String pSUCURSAL, String pPROVEEDOR, int pINVENTARIO, String pARTICULO, int pMAXIMOS, int pMINIMOS, int pEXISTENCIAS, String pACCION)
+        {
+            this.vArticulo_Inventario.aEMPRESA = pEMPRESA;
+            this.vArticulo_Inventario.aSUCURSAL = pSUCURSAL;
+            this.vArticulo_Inventario.aPROVEEDOR = pPROVEEDOR;
+            this.vArticulo_Inventario.aINVENTARIO = pINVENTARIO;
+            this.vArticulo_Inventario.aARTICULO = pARTICULO;
+            this.vArticulo_Inventario.aMAXIMOS = pMAXIMOS;
+            this.vArticulo_Inventario.aMINIMOS = pMINIMOS;
+            this.vArticulo_Inventario.aEXISTENCIAS = pEXISTENCIAS;
+
+            return vArticulo_Inventario.MaintenanceArticulo_Inventario(vArticulo_Inventario, pACCION);
+        }
+        [WebMethod]
+        public DataSet GetListArticulo_Inventario(string pEMPRESA, String pSUCURSAL, String pPROVEEDOR, int pINVENTARIO, String pARTICULO, int pMAXIMOS, int pMINIMOS, int pEXISTENCIAS, String pACCION)
+        {
+            this.vArticulo_Inventario.aEMPRESA = pEMPRESA;
+            this.vArticulo_Inventario.aSUCURSAL = pSUCURSAL;
+            this.vArticulo_Inventario.aPROVEEDOR = pPROVEEDOR;
+            this.vArticulo_Inventario.aINVENTARIO = pINVENTARIO;
+            this.vArticulo_Inventario.aARTICULO = pARTICULO;
+            this.vArticulo_Inventario.aMAXIMOS = pMAXIMOS;
+            this.vArticulo_Inventario.aMINIMOS = pMINIMOS;
+            this.vArticulo_Inventario.aEXISTENCIAS = pEXISTENCIAS;
+
+            return vArticulo_Inventario.GetListArticulo_Inventario(vArticulo_Inventario, pACCION);
+        }
+
+
     }
 }
