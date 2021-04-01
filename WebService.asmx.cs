@@ -176,5 +176,33 @@ namespace LogicLayer
             return vFactura.GetListFactura(vFactura, pACCION);
         }
 
+        DataLayer.Class.ClsProveedores vProveedores = new DataLayer.Class.ClsProveedores();
+        [WebMethod]
+        public string MaintenanceProveedores(string pID_EMPRESA, String pID_SUCURSAL, String pCEDULA_JURIDICA, String pRAZON_SOCIAL, String pUBICACION, String pEMAIL, String pTELEFONO, String pACCION)
+        {
+            this.vProveedores.aID_EMPRESA = pID_EMPRESA;
+            this.vProveedores.aID_SUCURSAL = pID_SUCURSAL;
+            this.vProveedores.aCEDULA_JURIDICA = pCEDULA_JURIDICA;
+            this.vProveedores.aRAZON_SOCIAL = pRAZON_SOCIAL;
+            this.vProveedores.aUBICACION = pUBICACION;
+            this.vProveedores.aEMAIL = pEMAIL;
+            this.vProveedores.aTELEFONO = pTELEFONO;
+
+            return vProveedores.MaintenanceProveedores(vProveedores, pACCION);
+        }
+        [WebMethod]
+        public DataSet GetListProveedores(string pID_EMPRESA, String pID_SUCURSAL, String pCEDULA_JURIDICA, String pRAZON_SOCIAL, String pUBICACION, String pEMAIL, String pTELEFONO, String pACCION)
+        {
+            this.vProveedores.aID_EMPRESA = pID_EMPRESA;
+            this.vProveedores.aID_SUCURSAL = pID_SUCURSAL;
+            this.vProveedores.aCEDULA_JURIDICA = pCEDULA_JURIDICA;
+            this.vProveedores.aRAZON_SOCIAL = pRAZON_SOCIAL;
+            this.vProveedores.aUBICACION = pUBICACION;
+            this.vProveedores.aEMAIL = pEMAIL;
+            this.vProveedores.aTELEFONO = pTELEFONO;
+
+            return vProveedores.GetListProveedores(vProveedores, pACCION);
+        }
+
     }
 }
