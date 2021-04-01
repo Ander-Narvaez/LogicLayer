@@ -56,5 +56,24 @@ namespace LogicLayer
             return vArticulo.GetListArticulo(vArticulo, pACCION);
         }
 
+        DataLayer.Class.ClsCategoria_articulo vCategoria_Articulo = new DataLayer.Class.ClsCategoria_articulo();
+        [WebMethod]
+        public string MaintenanceCategoria_Articulo(string pCODIGO, String pDESCRIPCION, Int32 pIMPUESTO, String pACCION)
+        {
+            this.vCategoria_Articulo.aCODIGO = pCODIGO;
+            this.vCategoria_Articulo.aDESCRIPCION = pDESCRIPCION;
+            this.vCategoria_Articulo.aIMPUESTO = pIMPUESTO;
+
+            return vCategoria_Articulo.MaintenanceCategoria_articulo(vCategoria_Articulo, pACCION);
+        }
+        [WebMethod]
+        public DataSet GetListCategoria_articulo(string pCODIGO, String pDESCRIPCION, Int32 pIMPUESTO, String pACCION)
+        {
+            this.vCategoria_Articulo.aCODIGO = pCODIGO;
+            this.vCategoria_Articulo.aDESCRIPCION = pDESCRIPCION;
+            this.vCategoria_Articulo.aIMPUESTO = pIMPUESTO;
+
+            return vCategoria_Articulo.GetListCategoria_articulo(vCategoria_Articulo, pACCION);
+        }
     }
 }
