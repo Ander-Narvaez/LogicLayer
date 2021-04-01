@@ -127,5 +127,25 @@ namespace LogicLayer
 
             return vClientes.GetListClientes(vClientes, pACCION);
         }
+
+        DataLayer.Class.ClsBodega vBodega = new DataLayer.Class.ClsBodega();
+        [WebMethod]
+        public string MaintenanceBodega(string pBODEGA, String pNOMBRE, String pUBICACION, String pACCION)
+        {
+            this.vBodega.aBODEGA = pBODEGA;
+            this.vBodega.aNOMBRE = pNOMBRE;
+            this.vBodega.aUBICACION = pUBICACION;
+
+            return vBodega.MaintenanceBodega(vBodega, pACCION);
+        }
+        [WebMethod]
+        public DataSet GetListBodega(string pBODEGA, String pNOMBRE, String pUBICACION, String pACCION)
+        {
+            this.vBodega.aBODEGA = pBODEGA;
+            this.vBodega.aNOMBRE = pNOMBRE;
+            this.vBodega.aUBICACION = pUBICACION;
+
+            return vBodega.GetListBodega(vBodega, pACCION);
+        }
     }
 }
