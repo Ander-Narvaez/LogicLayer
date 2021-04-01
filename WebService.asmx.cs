@@ -290,10 +290,11 @@ namespace LogicLayer
 
          DataLayer.Class.ClsCarde_Movimiento vCarde_Movimiento = new DataLayer.Class.ClsCarde_Movimiento();
         [WebMethod]
-        public string MaintenanceCarde_Movimiento(string pEMPRESA, String pSUCURSAL, Int32 pMOVIMIENTO, Int32 pINVENTARIO, String pTIPO, Int32 pCANTIDAD_EXISTENTE, Int32 pCANTIDAD, DateTime pFECHA_HORA, String pACCION)
+        public string MaintenanceCarde_Movimiento(string pEMPRESA, String pSUCURSAL, String pUSUARIO, Int32 pMOVIMIENTO, Int32 pINVENTARIO, String pTIPO, Int32 pCANTIDAD_EXISTENTE, Int32 pCANTIDAD, DateTime pFECHA_HORA, String pACCION)
         {
             this.vCarde_Movimiento.aEMPRESA = pEMPRESA;
             this.vCarde_Movimiento.aSUCURSAL = pSUCURSAL;
+            this.vCarde_Movimiento.aUSUARIO = pUSUARIO;
             this.vCarde_Movimiento.aMOVIMIENTO = pMOVIMIENTO;
             this.vCarde_Movimiento.aINVENTARIO  = pINVENTARIO;
             this.vCarde_Movimiento.aTIPO = pTIPO;
@@ -305,10 +306,11 @@ namespace LogicLayer
             return vCarde_Movimiento.MaintenanceCarde_Movimiento(vCarde_Movimiento, pACCION);
         }
         [WebMethod]
-        public DataSet GetListCarde_Movimiento(string pEMPRESA, String pSUCURSAL, Int32 pMOVIMIENTO, Int32 pINVENTARIO, String pTIPO, Int32 pCANTIDAD_EXISTENTE, Int32 pCANTIDAD, DateTime pFECHA_HORA, String pACCION)
+        public DataSet GetListCarde_Movimiento(string pEMPRESA, String pSUCURSAL, String pUSUARIO, Int32 pMOVIMIENTO, Int32 pINVENTARIO, String pTIPO, Int32 pCANTIDAD_EXISTENTE, Int32 pCANTIDAD, DateTime pFECHA_HORA, String pACCION)
         {
             this.vCarde_Movimiento.aEMPRESA = pEMPRESA;
             this.vCarde_Movimiento.aSUCURSAL = pSUCURSAL;
+            this.vCarde_Movimiento.aUSUARIO = pUSUARIO;
             this.vCarde_Movimiento.aMOVIMIENTO = pMOVIMIENTO;
             this.vCarde_Movimiento.aINVENTARIO  = pINVENTARIO;
             this.vCarde_Movimiento.aTIPO = pTIPO;
