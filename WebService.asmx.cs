@@ -147,5 +147,34 @@ namespace LogicLayer
 
             return vBodega.GetListBodega(vBodega, pACCION);
         }
+
+        DataLayer.Class.ClsFactura vFactura = new DataLayer.Class.ClsFactura();
+        [WebMethod]
+        public string MaintenanceFactura(string pEMPRESA, String pSUCURSAL, int pFACTURA, String pCLIENTE, String pEMPLEADO, DateTime pFECHA, String pESTADO, String pACCION)
+        {
+            this.vFactura.aEMPRESA = pEMPRESA;
+            this.vFactura.aSUCURSAL = pSUCURSAL;
+            this.vFactura.aFACTURA = pFACTURA;
+            this.vFactura.aCLIENTE = pCLIENTE;
+            this.vFactura.aEMPLEADO = pEMPLEADO;
+            this.vFactura.aFECHA = pFECHA;
+            this.vFactura.aESTADO = pESTADO;
+
+            return vFactura.MaintenanceFactura(vFactura, pACCION);
+        }
+        [WebMethod]
+        public DataSet GetListFactura(string pEMPRESA, String pSUCURSAL, int pFACTURA, String pCLIENTE, String pEMPLEADO, DateTime pFECHA, String pESTADO, String pACCION)
+        {
+            this.vFactura.aEMPRESA = pEMPRESA;
+            this.vFactura.aSUCURSAL = pSUCURSAL;
+            this.vFactura.aFACTURA = pFACTURA;
+            this.vFactura.aCLIENTE = pCLIENTE;
+            this.vFactura.aEMPLEADO = pEMPLEADO;
+            this.vFactura.aFECHA = pFECHA;
+            this.vFactura.aESTADO = pESTADO;
+
+            return vFactura.GetListFactura(vFactura, pACCION);
+        }
+
     }
 }
