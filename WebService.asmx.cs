@@ -35,5 +35,26 @@ namespace LogicLayer
 
             return vEmpresa.GetListEmpresa(vEmpresa, pACCION);
         }
+
+        DataLayer.Class.ClsArticulo vArticulo = new DataLayer.Class.ClsArticulo();
+        [WebMethod]
+        public string MaintenanceArticulo(string pARTICULO, String pCATEGORIA, Decimal pPRECIO, String pACCION)
+        {
+            this.vArticulo.aARTICULO = pARTICULO;
+            this.vArticulo.aCATEGORIA = pCATEGORIA;
+            this.vArticulo.aPRECIO = pPRECIO;
+
+            return vArticulo.MaintenanceArticulo(vArticulo, pACCION);
+        }
+        [WebMethod]
+        public DataSet GetListArticulo(string pARTICULO, String pCATEGORIA, Decimal pPRECIO, String pACCION)
+        {
+            this.vArticulo.aARTICULO = pARTICULO;
+            this.vArticulo.aCATEGORIA = pCATEGORIA;
+            this.vArticulo.aPRECIO = pPRECIO;
+
+            return vArticulo.GetListArticulo(vArticulo, pACCION);
+        }
+
     }
 }
