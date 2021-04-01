@@ -176,5 +176,32 @@ namespace LogicLayer
             return vFactura.GetListFactura(vFactura, pACCION);
         }
 
+        DataLayer.Class.ClsEmpleados vEmpleados = new DataLayer.Class.ClsEmpleados();
+        [WebMethod]
+        public string MaintenanceEmpleados(string pEMPRESA, String pSUCURSAL, String pCEDULA, String pNOMBRE, String pAPELLIDOS, String pEMAIL, int pTELEFONO, String pACCION)
+        {
+            this.vEmpleados.aEMPRESA = pEMPRESA;
+            this.vEmpleados.aSUCURSAL = pSUCURSAL;
+            this.vEmpleados.aCEDULA = pCEDULA;
+            this.vEmpleados.aNOMBRE = pNOMBRE;
+            this.vEmpleados.aAPELLIDOS = pAPELLIDOS;
+            this.vEmpleados.aEMAIL = pEMAIL;
+            this.vEmpleados.aTELEFONO = pTELEFONO;
+
+            return vEmpleados.MaintenanceEmpleados(vEmpleados, pACCION);
+        }
+        [WebMethod]
+        public DataSet GetListEmpleados(string pEMPRESA, String pSUCURSAL, String pCEDULA, String pNOMBRE, String pAPELLIDOS, String pEMAIL, int pTELEFONO, String pACCION)
+        {
+            this.vEmpleados.aEMPRESA = pEMPRESA;
+            this.vEmpleados.aSUCURSAL = pSUCURSAL;
+            this.vEmpleados.aCEDULA = pCEDULA;
+            this.vEmpleados.aNOMBRE = pNOMBRE;
+            this.vEmpleados.aAPELLIDOS = pAPELLIDOS;
+            this.vEmpleados.aEMAIL = pEMAIL;
+            this.vEmpleados.aTELEFONO = pTELEFONO;
+
+            return vEmpleados.GetListEmpleados(vEmpleados, pACCION);
+        }
     }
 }
