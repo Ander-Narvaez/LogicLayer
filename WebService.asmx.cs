@@ -105,5 +105,27 @@ namespace LogicLayer
 
             return vArticulo_Inventario.GetListArticulo_Inventario(vArticulo_Inventario, pACCION);
         }
+
+        DataLayer.Class.ClsClientes vClientes = new DataLayer.Class.ClsClientes();
+        [WebMethod]
+        public string MaintenanceClientes(string pCEDULA, String pNOMBRE, String pAPELLIDO_1, String pAPELLIDO_2, String pACCION)
+        {
+            this.vClientes.aCEDULA = pCEDULA;
+            this.vClientes.aNOMBRE = pNOMBRE;
+            this.vClientes.aAPELLIDO_1 = pAPELLIDO_1;
+            this.vClientes.aAPELLIDO_1 = pAPELLIDO_2;
+
+            return vClientes.MaintenanceClientes(vClientes, pACCION);
+        }
+        [WebMethod]
+        public DataSet GetListClientes(string pCEDULA, String pNOMBRE, String pAPELLIDO_1, String pAPELLIDO_2, String pACCION)
+        {
+            this.vClientes.aCEDULA = pCEDULA;
+            this.vClientes.aNOMBRE = pNOMBRE;
+            this.vClientes.aAPELLIDO_1 = pAPELLIDO_1;
+            this.vClientes.aAPELLIDO_1 = pAPELLIDO_2;
+
+            return vClientes.GetListClientes(vClientes, pACCION);
+        }
     }
 }
