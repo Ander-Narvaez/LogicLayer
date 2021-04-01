@@ -263,5 +263,29 @@ namespace LogicLayer
 
             return vEmpleados.GetListEmpleados(vEmpleados, pACCION);
         }
+
+        DataLayer.Class.ClsUsuarios vUsuarios = new DataLayer.Class.ClsUsuarios();
+        [WebMethod]
+        public string MaintenanceUsuarios(string pEMPRESA, String pSUCURSAL, String pUSUARIO, String pCONTRA, String pTIPO, String pACCION)
+        {
+            this.vUsuarios.aEMPRESA = pEMPRESA;
+            this.vUsuarios.aSUCURSAL = pSUCURSAL;
+            this.vUsuarios.aUSUARIO = pUSUARIO;
+            this.vUsuarios.aCONTRA = pCONTRA;
+            this.vUsuarios.aTIPO = pTIPO;
+
+            return vUsuarios.MaintenanceUsuarios(vUsuarios, pACCION);
+        }
+        [WebMethod]
+        public DataSet GetListUsuarios(string pEMPRESA, String pSUCURSAL, String pUSUARIO, String pCONTRA, String pTIPO, String pACCION)
+        {
+            this.vUsuarios.aEMPRESA = pEMPRESA;
+            this.vUsuarios.aSUCURSAL = pSUCURSAL;
+            this.vUsuarios.aUSUARIO = pUSUARIO;
+            this.vUsuarios.aCONTRA = pCONTRA;
+            this.vUsuarios.aTIPO = pTIPO;
+
+            return vUsuarios.GetListUsuarios(vUsuarios, pACCION);
+        }
     }
 }
