@@ -204,5 +204,36 @@ namespace LogicLayer
             return vProveedores.GetListProveedores(vProveedores, pACCION);
         }
 
+          DataLayer.Class.ClsDetalle_Factura vDetalle_Factura = new DataLayer.Class.ClsDetalle_Factura();
+        [WebMethod]
+        public string MaintenanceDetalle_Factura(string pID_EMPRESA, String pID_SUCURSAL, Int32 pNUM_LINEA, Int32 pFACTURA, String pARTICULO, Int32 pCANTIDAD, Int32 pIMPUESTO, Int32 pDESCUENTO, Int32 pTOTAL String pACCION)
+        {
+            this.vDetalle_Factura.aID_EMPRESA = pID_EMPRESA;
+            this.vDetalle_Factura.aID_SUCURSAL = pID_SUCURSAL;
+            this.vDetalle_Factura.aNUM_LINEA = pNUM_LINEA;
+            this.vDetalle_Factura.aFACTURA  = pFACTURA;
+            this.vDetalle_Factura.aARTICULO = pARTICULO;
+            this.vDetalle_Factura.aCANTIDAD = pCANTIDAD;
+            this.vDetalle_Factura.aIMPUESTO = pIMPUESTO;
+            this.vDetalle_Factura.aDESCUENTO = pDESCUENTO;
+            this.vDetalle_Factura.aTOTAL = pTOTAL;
+
+            return vDetalle_Factura.MaintenanceDetalle_Factura(vDetalle_Factura, pACCION);
+        }
+        [WebMethod]
+        public DataSet GetListDetalle_Factura(string pID_EMPRESA, String pID_SUCURSAL, Int32 pNUM_LINEA, Int32 pFACTURA, String pARTICULO, Int32 pCANTIDAD, Int32 pIMPUESTO, Int32 pDESCUENTO, Int32 pTOTAL String pACCION)
+        {
+            this.vDetalle_Factura.aID_EMPRESA = pID_EMPRESA;
+            this.vDetalle_Factura.aID_SUCURSAL = pID_SUCURSAL;
+            this.vDetalle_Factura.aNUM_LINEA = pNUM_LINEA;
+            this.vDetalle_Factura.aFACTURA = pFACTURA;
+            this.vDetalle_Factura.aARTICULO = pARTICULO;
+            this.vDetalle_Factura.aCANTIDAD = pCANTIDAD;
+            this.vDetalle_Factura.aIMPUESTO = pIMPUESTO;
+            this.vDetalle_Factura.aDESCUENTO = pDESCUENTO;
+            this.vDetalle_Factura.aTOTAL = pTOTAL;
+
+            return vDetalle_Factura.GetListDetalle_Factura(vDetalle_Factura, pACCION);
+        }
     }
 }
