@@ -14,9 +14,9 @@ namespace LogicLayer
 
         DataLayer.Class.ClsEmpresa vEmpresa = new DataLayer.Class.ClsEmpresa();
         [WebMethod]
-        public string MaintenanceEmpresa(string pID_COMPAÑIA, String pNOMBRE, String pUBICACION, String pEMAIL, String pTELEFONO, String pACCION)
+        public string MaintenanceEmpresa(string pEMPRESA, String pNOMBRE, String pUBICACION, String pEMAIL, String pTELEFONO, String pACCION)
         {
-            this.vEmpresa.aID_COMPAÑIA = pID_COMPAÑIA;
+            this.vEmpresa.aEMPRESA = pEMPRESA;
             this.vEmpresa.aNOMBRE = pNOMBRE;
             this.vEmpresa.aUBICACION = pUBICACION;
             this.vEmpresa.aEMAIL = pEMAIL;
@@ -25,9 +25,9 @@ namespace LogicLayer
             return vEmpresa.MaintenanceEmpresa(vEmpresa, pACCION);
         }
         [WebMethod]
-        public DataSet GetListEmpresa(string pID_COMPAÑIA, String pNOMBRE, String pUBICACION, String pEMAIL, String pTELEFONO, String pACCION)
+        public DataSet GetListEmpresa(string pEMPRESA, String pNOMBRE, String pUBICACION, String pEMAIL, String pTELEFONO, String pACCION)
         {
-            this.vEmpresa.aID_COMPAÑIA = pID_COMPAÑIA;
+            this.vEmpresa.aEMPRESA = pEMPRESA;
             this.vEmpresa.aNOMBRE = pNOMBRE;
             this.vEmpresa.aUBICACION = pUBICACION;
             this.vEmpresa.aEMAIL = pEMAIL;
