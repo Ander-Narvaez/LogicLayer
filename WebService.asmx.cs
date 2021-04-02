@@ -316,7 +316,7 @@ namespace LogicLayer
             this.vCarde_Movimiento.aTIPO = pTIPO;
             this.vCarde_Movimiento.aCANTIDAD = pCANTIDAD_EXISTENTE;
             this.vCarde_Movimiento.aCANTIDAD = pCANTIDAD;
-            this.vDetalle_Factura.aFECHA_HORA = pFECHA_HORA;
+            this.vCarde_Movimiento.aFECHA_HORA = pFECHA_HORA;
             
 
             return vCarde_Movimiento.GetListCarde_Movimiento(vCarde_Movimiento, pACCION);
@@ -324,7 +324,7 @@ namespace LogicLayer
 
          DataLayer.Class.ClsEstante vEstante = new DataLayer.Class.ClsEstante();
         [WebMethod]
-        public string MaintenanceEstante(string pEMPRESA, String pSUCURSAL, String pBODEGA,  String pSECCION, String pESTANTE, String pESTANTE, String pDESCRIPCION, String pACCION)
+        public string MaintenanceEstante(string pEMPRESA, String pSUCURSAL, String pBODEGA,  String pSECCION, String pESTANTE, String pDESCRIPCION, String pACCION)
         {
             this.vEstante.aEMPRESA = pEMPRESA;
             this.vEstante.aSUCURSAL = pSUCURSAL;
