@@ -308,7 +308,7 @@ namespace LogicLayer
             this.vCarde_Movimiento.aTIPO = pTIPO;
             this.vCarde_Movimiento.aCANTIDAD = pCANTIDAD_EXISTENTE;
             this.vCarde_Movimiento.aCANTIDAD = pCANTIDAD;
-            this.vDetalle_Factura.aFECHA_HORA = pFECHA_HORA;
+            this.vCarde_Movimiento.aFECHA_HORA = pFECHA_HORA;
             
 
             return vCarde_Movimiento.MaintenanceCarde_Movimiento(vCarde_Movimiento, pACCION);
