@@ -76,34 +76,34 @@ namespace LogicLayer
             return vCategoria_Articulo.GetListCategoria_articulo(vCategoria_Articulo, pACCION);
         }
 
-        DataLayer.Class.ClsArticulo_Inventario vArticulo_Inventario = new DataLayer.Class.ClsArticulo_Inventario();
+        DataLayer.Class.ClsInventario vInventario = new DataLayer.Class.ClsInventario();
         [WebMethod]
-        public string MaintenanceArticulo_Inventario(string pEMPRESA, String pSUCURSAL, String pPROVEEDOR, int pINVENTARIO, String pARTICULO, int pMAXIMOS, int pMINIMOS, int pEXISTENCIAS, String pACCION)
+        public string MaintenanceInventario(string pEMPRESA, String pSUCURSAL, String pPROVEEDOR, int pINVENTARIO, String pARTICULO, int pMAXIMOS, int pMINIMOS, int pEXISTENCIAS, String pACCION)
         {
-            this.vArticulo_Inventario.aEMPRESA = pEMPRESA;
-            this.vArticulo_Inventario.aSUCURSAL = pSUCURSAL;
-            this.vArticulo_Inventario.aPROVEEDOR = pPROVEEDOR;
-            this.vArticulo_Inventario.aINVENTARIO = pINVENTARIO;
-            this.vArticulo_Inventario.aARTICULO = pARTICULO;
-            this.vArticulo_Inventario.aMAXIMOS = pMAXIMOS;
-            this.vArticulo_Inventario.aMINIMOS = pMINIMOS;
-            this.vArticulo_Inventario.aEXISTENCIAS = pEXISTENCIAS;
+            this.vInventario.aEMPRESA = pEMPRESA;
+            this.vInventario.aSUCURSAL = pSUCURSAL;
+            this.vInventario.aPROVEEDOR = pPROVEEDOR;
+            this.vInventario.aINVENTARIO = pINVENTARIO;
+            this.vInventario.aARTICULO = pARTICULO;
+            this.vInventario.aMAXIMOS = pMAXIMOS;
+            this.vInventario.aMINIMOS = pMINIMOS;
+            this.vInventario.aEXISTENCIAS = pEXISTENCIAS;
 
-            return vArticulo_Inventario.MaintenanceArticulo_Inventario(vArticulo_Inventario, pACCION);
+            return vInventario.MaintenanceInventario(vInventario, pACCION);
         }
         [WebMethod]
-        public DataSet GetListArticulo_Inventario(string pEMPRESA, String pSUCURSAL, String pPROVEEDOR, int pINVENTARIO, String pARTICULO, int pMAXIMOS, int pMINIMOS, int pEXISTENCIAS, String pACCION)
+        public DataSet GetListInventario(string pEMPRESA, String pSUCURSAL, String pPROVEEDOR, int pINVENTARIO, String pARTICULO, int pMAXIMOS, int pMINIMOS, int pEXISTENCIAS, String pACCION)
         {
-            this.vArticulo_Inventario.aEMPRESA = pEMPRESA;
-            this.vArticulo_Inventario.aSUCURSAL = pSUCURSAL;
-            this.vArticulo_Inventario.aPROVEEDOR = pPROVEEDOR;
-            this.vArticulo_Inventario.aINVENTARIO = pINVENTARIO;
-            this.vArticulo_Inventario.aARTICULO = pARTICULO;
-            this.vArticulo_Inventario.aMAXIMOS = pMAXIMOS;
-            this.vArticulo_Inventario.aMINIMOS = pMINIMOS;
-            this.vArticulo_Inventario.aEXISTENCIAS = pEXISTENCIAS;
+            this.vInventario.aEMPRESA = pEMPRESA;
+            this.vInventario.aSUCURSAL = pSUCURSAL;
+            this.vInventario.aPROVEEDOR = pPROVEEDOR;
+            this.vInventario.aINVENTARIO = pINVENTARIO;
+            this.vInventario.aARTICULO = pARTICULO;
+            this.vInventario.aMAXIMOS = pMAXIMOS;
+            this.vInventario.aMINIMOS = pMINIMOS;
+            this.vInventario.aEXISTENCIAS = pEXISTENCIAS;
 
-            return vArticulo_Inventario.GetListArticulo_Inventario(vArticulo_Inventario, pACCION);
+            return vInventario.GetListInventario(vInventario, pACCION);
         }
 
         DataLayer.Class.ClsClientes vClientes = new DataLayer.Class.ClsClientes();
@@ -130,18 +130,24 @@ namespace LogicLayer
 
         DataLayer.Class.ClsBodega vBodega = new DataLayer.Class.ClsBodega();
         [WebMethod]
-        public string MaintenanceBodega(string pBODEGA, String pNOMBRE, String pUBICACION, String pACCION)
+        public string MaintenanceBodega(string pEMPRESA, String pSUCURSAL, string pBODEGA, int pINVENTARIO, String pNOMBRE, String pUBICACION, String pACCION)
         {
+            this.vBodega.aEMPRESA = pEMPRESA;
+            this.vBodega.aSUCURSAL = pSUCURSAL;
             this.vBodega.aBODEGA = pBODEGA;
+            this.vBodega.aINVENTARIO = pINVENTARIO;
             this.vBodega.aNOMBRE = pNOMBRE;
             this.vBodega.aUBICACION = pUBICACION;
 
             return vBodega.MaintenanceBodega(vBodega, pACCION);
         }
         [WebMethod]
-        public DataSet GetListBodega(string pBODEGA, String pNOMBRE, String pUBICACION, String pACCION)
+        public DataSet GetListBodega(string pEMPRESA, String pSUCURSAL, string pBODEGA, int pINVENTARIO, String pNOMBRE, String pUBICACION, String pACCION)
         {
+            this.vBodega.aEMPRESA = pEMPRESA;
+            this.vBodega.aSUCURSAL = pSUCURSAL;
             this.vBodega.aBODEGA = pBODEGA;
+            this.vBodega.aINVENTARIO = pINVENTARIO;
             this.vBodega.aNOMBRE = pNOMBRE;
             this.vBodega.aUBICACION = pUBICACION;
 
@@ -266,10 +272,11 @@ namespace LogicLayer
 
         DataLayer.Class.ClsUsuarios vUsuarios = new DataLayer.Class.ClsUsuarios();
         [WebMethod]
-        public string MaintenanceUsuarios(string pEMPRESA, String pSUCURSAL, String pUSUARIO, String pCONTRA, String pTIPO, String pACCION)
+        public string MaintenanceUsuarios(string pEMPRESA, String pSUCURSAL, int pID, String pUSUARIO, String pCONTRA, String pTIPO, String pACCION)
         {
             this.vUsuarios.aEMPRESA = pEMPRESA;
             this.vUsuarios.aSUCURSAL = pSUCURSAL;
+            this.vUsuarios.aID = pID;
             this.vUsuarios.aUSUARIO = pUSUARIO;
             this.vUsuarios.aCONTRA = pCONTRA;
             this.vUsuarios.aTIPO = pTIPO;
@@ -277,15 +284,40 @@ namespace LogicLayer
             return vUsuarios.MaintenanceUsuarios(vUsuarios, pACCION);
         }
         [WebMethod]
-        public DataSet GetListUsuarios(string pEMPRESA, String pSUCURSAL, String pUSUARIO, String pCONTRA, String pTIPO, String pACCION)
+        public DataSet GetListUsuarios(string pEMPRESA, String pSUCURSAL, int pID, String pUSUARIO, String pCONTRA, String pTIPO, String pACCION)
         {
             this.vUsuarios.aEMPRESA = pEMPRESA;
             this.vUsuarios.aSUCURSAL = pSUCURSAL;
+            this.vUsuarios.aID = pID;
             this.vUsuarios.aUSUARIO = pUSUARIO;
             this.vUsuarios.aCONTRA = pCONTRA;
             this.vUsuarios.aTIPO = pTIPO;
 
             return vUsuarios.GetListUsuarios(vUsuarios, pACCION);
+        }
+
+        DataLayer.Class.ClsSeccion vSeccion = new DataLayer.Class.ClsSeccion();
+        [WebMethod]
+        public string MaintenanceSeccion(string pEMPRESA, String pSUCURSAL, String pBODEGA, String pSECCION, String pDESCRIPCION, String pACCION)
+        {
+            this.vSeccion.aEMPRESA = pEMPRESA;
+            this.vSeccion.aSUCURSAL = pSUCURSAL;
+            this.vSeccion.aBODEGA = pBODEGA;
+            this.vSeccion.aSECCION = pSECCION;
+            this.vSeccion.aDESCRIPCION = pDESCRIPCION;
+
+            return vSeccion.MaintenanceSeccion(vSeccion, pACCION);
+        }
+        [WebMethod]
+        public DataSet GetListSeccion(string pEMPRESA, String pSUCURSAL, String pBODEGA, String pSECCION, String pDESCRIPCION, String pACCION)
+        {
+            this.vSeccion.aEMPRESA = pEMPRESA;
+            this.vSeccion.aSUCURSAL = pSUCURSAL;
+            this.vSeccion.aBODEGA = pBODEGA;
+            this.vSeccion.aSECCION = pSECCION;
+            this.vSeccion.aDESCRIPCION = pDESCRIPCION;
+
+            return vSeccion.GetListSeccion(vSeccion, pACCION);
         }
     }
 }
