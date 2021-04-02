@@ -321,5 +321,33 @@ namespace LogicLayer
 
             return vCarde_Movimiento.GetListCarde_Movimiento(vCarde_Movimiento, pACCION);
         }
+
+         DataLayer.Class.ClsEstante vEstante = new DataLayer.Class.ClsEstante();
+        [WebMethod]
+        public string MaintenanceEstante(string pEMPRESA, String pSUCURSAL, String pBODEGA,  String pSECCION, String pESTANTE, String pESTANTE, String pDESCRIPCION, String pACCION)
+        {
+            this.vEstante.aEMPRESA = pEMPRESA;
+            this.vEstante.aSUCURSAL = pSUCURSAL;
+            this.vEstante.aBODEGA = pBODEGA;
+            this.vEstante.aSECCION = pSECCION;
+            this.vEstante.aESTANTE  = pESTANTE;
+            this.vEstante.aDESCRIPCION = pDESCRIPCION;
+            
+
+            return vEstante.MaintenanceEstante(vEstante, pACCION);
+        }
+        [WebMethod]
+        public DataSet GetListEstante(string pEMPRESA, String pSUCURSAL, String pBODEGA,  String pSECCION, String pESTANTE, String pESTANTE, String pDESCRIPCION, String pACCION)
+        {
+            this.vEstante.aEMPRESA = pEMPRESA;
+            this.vEstante.aSUCURSAL = pSUCURSAL;
+            this.vEstante.aBODEGA = pBODEGA;
+            this.vEstante.aSECCION = pSECCION;
+            this.vEstante.aESTANTE  = pESTANTE;
+            this.vEstante.aDESCRIPCION = pDESCRIPCION;
+            
+
+            return vEstante.GetListEstante(vEstante, pACCION);
+        }
     }
 }
