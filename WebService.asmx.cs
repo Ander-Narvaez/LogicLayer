@@ -345,7 +345,7 @@ namespace LogicLayer
             return vEstante.MaintenanceEstante(vEstante, pACCION);
         }
         [WebMethod]
-        public DataSet GetListEstante(string pEMPRESA, String pSUCURSAL, String pBODEGA,  String pSECCION, String pESTANTE, String pESTANTE, String pDESCRIPCION, String pACCION)
+        public DataSet GetListEstante(string pEMPRESA, String pSUCURSAL, String pBODEGA,  String pSECCION, String pESTANTE, String pDESCRIPCION, String pACCION)
         {
             this.vEstante.aEMPRESA = pEMPRESA;
             this.vEstante.aSUCURSAL = pSUCURSAL;
