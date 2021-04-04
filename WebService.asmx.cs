@@ -36,6 +36,33 @@ namespace LogicLayer
             return vEmpresa.GetListEmpresa(vEmpresa, pACCION);
         }
 
+
+        DataLayer.Class.ClsSucursal vSucursal = new DataLayer.Class.ClsSucursal();
+        [WebMethod]
+        public string MaintenanceSucursal(string pEMPRESA, string pSUCURSAL, String pNOMBRE, String pUBICACION, String pEMAIL, String pTELEFONO, String pACCION)
+        {
+            this.vSucursal.aEMPRESA = pEMPRESA;
+            this.vSucursal.aSUCURSAL = pSUCURSAL;
+            this.vSucursal.aNOMBRE = pNOMBRE;
+            this.vSucursal.aUBICACION = pUBICACION;
+            this.vSucursal.aEMAIL = pEMAIL;
+            this.vSucursal.aTELEFONO = pTELEFONO;
+
+            return vSucursal.MaintenanceSucursal(vSucursal, pACCION);
+        }
+        [WebMethod]
+        public DataSet GetListSucursal(string pEMPRESA, string pSUCURSAL, String pNOMBRE, String pUBICACION, String pEMAIL, String pTELEFONO, String pACCION)
+        {
+            this.vSucursal.aEMPRESA = pEMPRESA;
+            this.vSucursal.aSUCURSAL = pSUCURSAL;
+            this.vSucursal.aNOMBRE = pNOMBRE;
+            this.vSucursal.aUBICACION = pUBICACION;
+            this.vSucursal.aEMAIL = pEMAIL;
+            this.vSucursal.aTELEFONO = pTELEFONO;
+
+            return vSucursal.GetListSucursal(vSucursal, pACCION);
+        }
+
         DataLayer.Class.ClsArticulo vArticulo = new DataLayer.Class.ClsArticulo();
         [WebMethod]
         public string MaintenanceArticulo(string pARTICULO, String pCATEGORIA, Decimal pPRECIO, String pACCION)
