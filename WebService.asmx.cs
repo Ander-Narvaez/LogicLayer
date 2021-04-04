@@ -14,7 +14,7 @@ namespace LogicLayer
 
         DataLayer.Class.ClsEmpresa vEmpresa = new DataLayer.Class.ClsEmpresa();
         [WebMethod]
-        public string MaintenanceEmpresa(string pEMPRESA, String pNOMBRE, String pUBICACION, String pEMAIL, String pTELEFONO, String pACCION)
+        public string MaintenanceEmpresa1(string pEMPRESA, String pNOMBRE, String pUBICACION, String pEMAIL, String pTELEFONO, String pACCION)
         {
             this.vEmpresa.aEMPRESA = pEMPRESA;
             this.vEmpresa.aNOMBRE = pNOMBRE;
