@@ -271,7 +271,7 @@ namespace LogicLayer
 
         DataLayer.Class.ClsEmpleados vEmpleados = new DataLayer.Class.ClsEmpleados();
         [WebMethod]
-        public string MaintenanceEmpleados(string pEMPRESA, String pSUCURSAL, String pCEDULA, String pNOMBRE, String pAPELLIDOS, String pEMAIL, int pTELEFONO, String pACCION)
+        public string MaintenanceEmpleados(string pEMPRESA, String pSUCURSAL, String pCEDULA, String pNOMBRE, String pAPELLIDOS, String pEMAIL, String pTELEFONO, String pACCION)
         {
             this.vEmpleados.aEMPRESA = pEMPRESA;
             this.vEmpleados.aSUCURSAL = pSUCURSAL;
@@ -284,7 +284,7 @@ namespace LogicLayer
             return vEmpleados.MaintenanceEmpleados(vEmpleados, pACCION);
         }
         [WebMethod]
-        public DataSet GetListEmpleados(string pEMPRESA, String pSUCURSAL, String pCEDULA, String pNOMBRE, String pAPELLIDOS, String pEMAIL, int pTELEFONO, String pACCION)
+        public DataSet GetListEmpleados(string pEMPRESA, String pSUCURSAL, String pCEDULA, String pNOMBRE, String pAPELLIDOS, String pEMAIL, String pTELEFONO, String pACCION)
         {
             this.vEmpleados.aEMPRESA = pEMPRESA;
             this.vEmpleados.aSUCURSAL = pSUCURSAL;
