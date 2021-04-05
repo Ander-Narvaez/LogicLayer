@@ -211,10 +211,10 @@ namespace LogicLayer
 
         DataLayer.Class.ClsProveedores vProveedores = new DataLayer.Class.ClsProveedores();
         [WebMethod]
-        public string MaintenanceProveedores(string pID_EMPRESA, String pID_SUCURSAL, String pCEDULA_JURIDICA, String pRAZON_SOCIAL, String pUBICACION, String pEMAIL, String pTELEFONO, String pACCION)
+        public string MaintenanceProveedores(string pEMPRESA, String pSUCURSAL, String pCEDULA_JURIDICA, String pRAZON_SOCIAL, String pUBICACION, String pEMAIL, String pTELEFONO, String pACCION)
         {
-            this.vProveedores.aID_EMPRESA = pID_EMPRESA;
-            this.vProveedores.aID_SUCURSAL = pID_SUCURSAL;
+            this.vProveedores.aEMPRESA = pEMPRESA;
+            this.vProveedores.aSUCURSAL = pSUCURSAL;
             this.vProveedores.aCEDULA_JURIDICA = pCEDULA_JURIDICA;
             this.vProveedores.aRAZON_SOCIAL = pRAZON_SOCIAL;
             this.vProveedores.aUBICACION = pUBICACION;
@@ -224,10 +224,10 @@ namespace LogicLayer
             return vProveedores.MaintenanceProveedores(vProveedores, pACCION);
         }
         [WebMethod]
-        public DataSet GetListProveedores(string pID_EMPRESA, String pID_SUCURSAL, String pCEDULA_JURIDICA, String pRAZON_SOCIAL, String pUBICACION, String pEMAIL, String pTELEFONO, String pACCION)
+        public DataSet GetListProveedores(string pEMPRESA, String pSUCURSAL, String pCEDULA_JURIDICA, String pRAZON_SOCIAL, String pUBICACION, String pEMAIL, String pTELEFONO, String pACCION)
         {
-            this.vProveedores.aID_EMPRESA = pID_EMPRESA;
-            this.vProveedores.aID_SUCURSAL = pID_SUCURSAL;
+            this.vProveedores.aEMPRESA = pEMPRESA;
+            this.vProveedores.aSUCURSAL = pSUCURSAL;
             this.vProveedores.aCEDULA_JURIDICA = pCEDULA_JURIDICA;
             this.vProveedores.aRAZON_SOCIAL = pRAZON_SOCIAL;
             this.vProveedores.aUBICACION = pUBICACION;
