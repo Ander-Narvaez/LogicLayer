@@ -140,7 +140,7 @@ namespace LogicLayer
             this.vClientes.aCEDULA = pCEDULA;
             this.vClientes.aNOMBRE = pNOMBRE;
             this.vClientes.aAPELLIDO_1 = pAPELLIDO_1;
-            this.vClientes.aAPELLIDO_1 = pAPELLIDO_2;
+            this.vClientes.aAPELLIDO_2 = pAPELLIDO_2;
 
             return vClientes.MaintenanceClientes(vClientes, pACCION);
         }
@@ -150,7 +150,7 @@ namespace LogicLayer
             this.vClientes.aCEDULA = pCEDULA;
             this.vClientes.aNOMBRE = pNOMBRE;
             this.vClientes.aAPELLIDO_1 = pAPELLIDO_1;
-            this.vClientes.aAPELLIDO_1 = pAPELLIDO_2;
+            this.vClientes.aAPELLIDO_2 = pAPELLIDO_2;
 
             return vClientes.GetListClientes(vClientes, pACCION);
         }
