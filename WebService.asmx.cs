@@ -65,18 +65,20 @@ namespace LogicLayer
 
         DataLayer.Class.ClsArticulo vArticulo = new DataLayer.Class.ClsArticulo();
         [WebMethod]
-        public string MaintenanceArticulo(string pARTICULO, String pCATEGORIA, Decimal pPRECIO, String pACCION)
+        public string MaintenanceArticulo(string pARTICULO, string pNOMBRE_ARTICULO, String pCATEGORIA, Decimal pPRECIO, String pACCION)
         {
             this.vArticulo.aARTICULO = pARTICULO;
+            this.vArticulo.aNOMBRE_ARTICULO = pNOMBRE_ARTICULO;
             this.vArticulo.aCATEGORIA = pCATEGORIA;
             this.vArticulo.aPRECIO = pPRECIO;
 
             return vArticulo.MaintenanceArticulo(vArticulo, pACCION);
         }
         [WebMethod]
-        public DataSet GetListArticulo(string pARTICULO, String pCATEGORIA, Decimal pPRECIO, String pACCION)
+        public DataSet GetListArticulo(string pARTICULO, string pNOMBRE_ARTICULO, String pCATEGORIA, Decimal pPRECIO, String pACCION)
         {
             this.vArticulo.aARTICULO = pARTICULO;
+            this.vArticulo.aNOMBRE_ARTICULO = pNOMBRE_ARTICULO;
             this.vArticulo.aCATEGORIA = pCATEGORIA;
             this.vArticulo.aPRECIO = pPRECIO;
 
